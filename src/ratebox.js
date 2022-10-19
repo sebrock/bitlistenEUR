@@ -17,7 +17,7 @@ rateboxGetRate = function() {
     $.ajax({
         dataType: "json",
         cache: false,
-        url: "https://api.coinbase.com/v2/prices/BTC-USD/buy",
+        url: "https://api.coinbase.com/v2/prices/BTC-EUR/buy",
         success: function(data) {
             setGlobalRate(data.data.amount);
             rateboxTimeout = setTimeout(rateboxGetRate, ratebox_ms);
